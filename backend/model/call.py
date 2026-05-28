@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer
-from backend.model.user import Base
+from backend.database.db import Base
 
 class Call(Base):
     __tablename__ = "calls"

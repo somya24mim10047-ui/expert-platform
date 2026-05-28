@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from backend.model.user import Base
-
+from backend.database.db import Base
 class Expert(Base):
     __tablename__ = "experts"
 

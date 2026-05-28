@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: expert-backend
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: expert-backend
+
+  template:
+    metadata:
+      labels:
+        app: expert-backend
+
+    spec:
+      containers:
+      - name: backend
+        image: expert-platform
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
